@@ -1,4 +1,5 @@
 import pytest
+
 from src.calcs import add, sub
 
 
@@ -9,4 +10,3 @@ def test_add():
 
 def test_sub():
     assert sub(2, 1) == 1
-
