@@ -23,9 +23,11 @@ repos:
   hooks:
   - id: check-json
   - id: check-yaml
+  - id: trailing-whitespace
   - id: pretty-format-json
     files: \.json$
-  - id: trailing-whitespace
+    args:
+    - --autofix
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
   rev: v2.11.0
   hooks:
