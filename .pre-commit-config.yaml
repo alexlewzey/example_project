@@ -32,7 +32,8 @@ repos:
     hooks:
       - id: format-yaml
         name: format-yaml
-        entry: sh -c 'find . -type f \( -name "*.yml" -o -name "*.yaml" -o -path "./.github" \) -exec yq --prettyPrint -i {} \;'
+        entry: find . -type f \( -name "*.yml" -o -name "*.yaml" -o -path "./.github" \) -exec yq --prettyPrint -i {} \;
+        pass_filenames: false
         language: system
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.7.1
